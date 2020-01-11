@@ -20,9 +20,6 @@ def time():
     time.sleep(0.1)
   
 while True:
-    if time.strtftime("%M%S") == "3100": 
-        blast()
-    else: 
-        time()
+    time()
     
 
