@@ -21,6 +21,9 @@ def timeclock():
     time.sleep(0.1)
   
 while True:
-    timeclock()
+    if time.strftime("%M%S") == "4500":
+        blast()
+    else:
+        timeclock()
     
 
