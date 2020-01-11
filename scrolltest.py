@@ -20,7 +20,7 @@ def time():
     time.sleep(0.1)
   
 while True:
-    if time.strtftime("%M%S") == "1305": 
+    if time.strtftime("%M%S") == "1700": 
         blast()
     else: 
         time()
