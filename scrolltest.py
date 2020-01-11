@@ -5,6 +5,7 @@ from scrollphathd.fonts import font5x5 as f55
 def blast():
     for i in range(3): 
         sphd.clear()
+        time.sleep(.5)
         sphd.fill(brightness = .4 , x = 0, y=0, width = 0, height = 0)
         sphd.show()
         time.sleep(.5)
