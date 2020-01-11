@@ -20,7 +20,7 @@ def timeclock():
     time.sleep(0.1)
   
 while True:
-    if time.strftime("%M%S") == "1500":
+    if time.strftime("%M%S") == "1600":
         blast()
     else:
         timeclock()
