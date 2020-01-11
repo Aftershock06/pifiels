@@ -3,7 +3,7 @@ import time
 import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
-full = "brightness, x = 0, y=0, width = 0, height = 0"
+full = brightness, x = 0, y=0, width = 0, height = 0
 def blast():
     for i in range(3): 
         sphd.clear()
