@@ -1,13 +1,11 @@
-import math
-import time
+import math, time
 import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
-full = brightness, x = 0, y=0, width = 0, height = 0
 def blast():
     for i in range(3): 
         sphd.clear()
-        sphd.fill(full)
+        sphd.fill(brightness = .4 , x = 0, y=0, width = 0, height = 0)
         sphd.show()
         time.sleep(.5)
    
@@ -21,7 +19,7 @@ def timeclock():
     time.sleep(0.1)
   
 while True:
-    if time.strftime("%M%S") == "4500":
+    if time.strftime("%M%S") == "0900":
         blast()
     else:
         timeclock()
