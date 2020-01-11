@@ -21,7 +21,7 @@ def timeclock():
     time.sleep(0.1)
   
 while True:
-    if time.strftime("%M%S") == "1700":
+    if time.strftime("%M%S") == "0000":
         blast()
     else:
         timeclock()
