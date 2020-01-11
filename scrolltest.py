@@ -1,4 +1,5 @@
-import math, time
+import math
+import time
 import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
@@ -10,7 +11,7 @@ def blast():
         sphd.show()
         time.sleep(.5)
    
-def time(): 
+def timeclock(): 
     timenow = time.strftime("%I:%M")
     sphd.clear()
     sphd.write_string(timenow, x = 0, y = 0, font = f55, brightness = .3)
@@ -20,6 +21,6 @@ def time():
     time.sleep(0.1)
   
 while True:
-    time()
+    timeclock()
     
 
