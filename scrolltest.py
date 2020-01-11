@@ -2,6 +2,8 @@ import math, time
 import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
+#!/usr/bin/env python3
+
 def blast():
     for i in range(3): 
         sphd.clear()
