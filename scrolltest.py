@@ -15,7 +15,7 @@ def blast():
    
 def timeclock(): 
     timenow = time.strftime("%I:%M")
-    timenow.replace('0',"O")
+    timenow = timenow.replace('0',"O")
     sphd.clear()
     sphd.write_string(timenow, x = 0, y = 0, font = f55, brightness = .3)
     if int(time.time()) % 2 == 0:
