@@ -3,7 +3,6 @@ import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
 #!/usr/bin/env python3
-pid = os.fork() 
 
 def blast():
     for i in range(3): 
@@ -32,11 +31,7 @@ def runclock():
    
 while True:
     try:
-        if pid:
-            os.kill(pid, signal.SIGSTOP)
-            os.kill(pid, signal.SIGCONT)
-        else:
-            runclock()
+        runclock()
         
     except KeyboardInterrupt:
         print("Closing Phat Clock")
