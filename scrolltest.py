@@ -1,4 +1,4 @@
-import math, time , os, signal
+import math, time , os, signal, sys
 import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
@@ -28,11 +28,16 @@ def runclock():
         blast()
     else:
         timeclock()
+
+def handler(signum, frame):
+    print 'Shutting down...'
+    sys.exit(1)
    
 while True:
+    os = os.getpid()
+    signal.signal(signal.SIGTERM, handler)
     try:
         runclock()
-        
     except KeyboardInterrupt:
         print("Closing Phat Clock")
         sphd.clear()
