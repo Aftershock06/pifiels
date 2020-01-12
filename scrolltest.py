@@ -35,7 +35,7 @@ while True:
         if pid:
             os.kill(pid, signal.SIGSTOP)
             os.kill(pid, signal.SIGCONT)
-         else: 
+        else:
             runclock()
         
     except KeyboardInterrupt:
