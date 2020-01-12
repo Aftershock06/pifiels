@@ -21,11 +21,18 @@ def timeclock():
         sphd.clear_rect(8,0,1,5)
     sphd.show()
     time.sleep(0.1)
-  
+
+    
 while True:
-    if time.strftime("%M%S") == "0000":
-        blast()
-    else:
-        timeclock()
+    try:
+        if time.strftime("%M%S") == "0000":
+            blast()
+        else:
+            timeclock()
+    except KeyboardInterrupt:
+        print("Closing Phat Clock")
+        sphd.clear()
+        sphd.show()
+        
     
 
