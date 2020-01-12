@@ -30,7 +30,6 @@ def runclock():
         timeclock()
 
 def handler(signum, frame):
-    print 'Shutting down...'
     sys.exit(1)
    
 while True:
