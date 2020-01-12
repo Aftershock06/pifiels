@@ -42,6 +42,7 @@ while True:
         print("Closing Phat Clock")
         sphd.clear()
         sphd.show()
+        exit()
         
     
 
