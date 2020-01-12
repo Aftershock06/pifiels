@@ -40,7 +40,7 @@ def timeclock():
     timenow = time.strftime("%I:%M")
     timenow = timenow.replace('0',"O")
     sphd.clear()
-    sphd.write_string(timenow, x = 0, y = 1, font = f55, brightness = .3)
+    sphd.write_string(timenow, x = 0, y = 0, font = f55, brightness = .3)
     if int(time.time()) % 2 == 0:
         sphd.clear_rect(8,0,1,5)
     sphd.show()
@@ -51,9 +51,6 @@ def runclock():
         blast()
     else:
         timeclock()
-        time.sleep(5)
-        weather()
-        time.sleep(5)
         
 
 def handler(signum, frame):
