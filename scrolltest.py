@@ -36,7 +36,7 @@ def blast():
         sphd.show()
         time.sleep(.5)
    
-def timeclock(): 
+def timeclock():
     timenow = time.strftime("%I:%M")
     timenow = timenow.replace('0',"O")
     sphd.clear()
@@ -49,10 +49,11 @@ def timeclock():
 def runclock():
     if time.strftime("%M%S") == "0000":
         blast()
+    elif int(time.strftime("%S")) % 7 = 0:
+        weather()
     else:
         timeclock()
         
-
 def handler(signum, frame):
     sys.exit(1)
    
