@@ -1,8 +1,9 @@
-import math, time
+import math, time , os, signal
 import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
 #!/usr/bin/env python3
+pid = os.fork() 
 
 def blast():
     for i in range(3): 
@@ -23,13 +24,20 @@ def timeclock():
     sphd.show()
     time.sleep(0.1)
 
-    
-while True:
-    try:
-        if time.strftime("%M%S") == "0000":
+def runclock():
+    if time.strftime("%M%S") == "0000":
             blast()
         else:
             timeclock()
+   
+while True:
+    try:
+        if pid:
+            os.kill(pid, signal.SIGSTOP)
+            os.kill(pid, signal.SIGCONT)
+         else: 
+            runclock()
+        
     except KeyboardInterrupt:
         print("Closing Phat Clock")
         sphd.clear()
