@@ -45,7 +45,7 @@ def timeclock():
 def runclock():
     if time.strftime("%M%S") == "0000":
         blast()
-    elif int(time.time) % 13 == 0:
+    elif int(time.time()) % 13 == 0:
         weather()
     else:
         timeclock()
