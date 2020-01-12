@@ -27,7 +27,7 @@ def timeclock():
 def runclock():
     if time.strftime("%M%S") == "0000":
         blast()
-     else:
+    else:
         timeclock()
    
 while True:
