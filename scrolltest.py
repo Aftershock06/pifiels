@@ -21,12 +21,7 @@ def weather():
     sphd.write_string(temp + " F", x = 0, y = 0, font = f55, brightness = .3)
     sphd.show()
     time.sleep(2)
-    sphd.clear()
-    sphd.write_string(looks, x = 0, y=0, font = f55, brightness = .3)
-    sphd.show()
-    time.sleep(2)
-    sphd.clear()
-    sphd.show()
+    
 
 def blast():
     for i in range(3): 
