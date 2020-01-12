@@ -33,7 +33,7 @@ def handler(signum, frame):
     sys.exit(1)
    
 while True:
-    os = os.getpid()
+    pid = os.getpid()
     signal.signal(signal.SIGTERM, handler)
     try:
         runclock()
