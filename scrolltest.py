@@ -11,9 +11,9 @@ url = 'https://extreme-ip-lookup.com/json/'
 r = requests.get(url)
 data = json.loads(r.content.decode())
 location = (data['region'][0]+data['region'][-1]+"/" + data['city']).lower()
-w = requests.get('https://www.wunderground.com/weather/us/%s' % (location))
 
-def weather(): 
+def weather():
+    w = requests.get('https://www.wunderground.com/weather/us/%s' % (location))
     weatherData = BeautifulSoup(w.content, 'html.parser')
     temp = weatherData.find(class_="wu-value wu-value-to").text.strip()
     looks = weatherData.find(class_="condition-icon").get_text()
