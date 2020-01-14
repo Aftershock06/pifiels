@@ -3,9 +3,7 @@ import scrollphathd as sphd
 from scrollphathd.fonts import font5x5 as f55
 
 #!/usr/bin/env python3
-import requests, json
 from bs4 import BeautifulSoup
-
 
 url = 'https://extreme-ip-lookup.com/json/'
 r = requests.get(url)
