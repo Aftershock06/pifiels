@@ -20,7 +20,6 @@ def weather():
     sphd.show()
     time.sleep(2)
     
-
 def blast():
     for i in range(3): 
         sphd.clear()
@@ -61,6 +60,3 @@ while True:
         sphd.clear()
         sphd.show()
         exit()
-        
-    
-
