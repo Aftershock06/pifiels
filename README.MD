@@ -1,3 +1,7 @@
+UPDATE - 12/Mar/2022 
+
+I am relaunching this project to get it working in my new space. 
+
 #pifiles
 
 I followed these commands to update the system to stop running the scrolltest.py
